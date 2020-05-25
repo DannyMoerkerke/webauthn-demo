@@ -1,0 +1,39 @@
+:root {
+  font-family: 'system-ui', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5em;
+}
+#register-button,
+#authenticate-button {
+  display: none;
+}
+
+#delete-button {
+  display: none;
+  --button-color: rgba(255, 0, 0, 0.62);
+  margin-top: 20px;
+}
+
+#loader {
+  display: none;
+  margin-left: 20px;
+  animation: rotation 1s infinite linear;
+}
+
+#demo-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#auth-dialog {
+  --dialog-height: 200px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

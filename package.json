@@ -1,0 +1,36 @@
+{
+  "name": "webauthn-demo",
+  "version": "1.0.0",
+  "description": "A demo of passwordless Web Authentication (WebAuthn)",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "ws -p 8080 --https --key ./certs/private-key.pem --cert ./certs/cert.pem --spa index.html",
+    "webauthn-server": "node server/webauthn-server.js",
+    "start": "concurrently \"npm run serve\" \"npm run webauthn-server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DannyMoerkerke/webauthn-demo.git"
+  },
+  "author": "Danny Moerkerke <danny@dannymoerkerke.nl>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DannyMoerkerke/webauthn-demo/issues"
+  },
+  "homepage": "https://github.com/DannyMoerkerke/webauthn-demo#readme",
+  "dependencies": {
+    "@dannymoerkerke/fido2-lib": "^2.3.0",
+    "@dannymoerkerke/material-webcomponents": "^1.2.8",
+    "base64url": "^3.0.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "error-handler": "^1.0.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "local-web-server": "^4.2.0"
+  }
+}

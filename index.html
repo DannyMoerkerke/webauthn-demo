@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>WebAuth demo</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo.css">
+
+  </head>
+  <body>
+    <h1>Demo</h1>
+
+    <p>
+      Web Authentication API (WebAuthn) enables passwordless authentication through your device's fingerprint reader or
+      an external USB Security Key.
+    </p>
+
+    <p>
+      Register a credential using the button below and choose if you would like to authenticate using your fingerprint or
+      USB Security Key. After that, you can authenticate using the registered credential.
+    </p>
+
+    <p>
+      Currently, iOS only supports USB Security Key. Android and Chrome on MacOS support both USB Security Key and
+      fingerprint reader.
+    </p>
+
+    <div id="demo-buttons">
+      <material-button id="register-button" label="Register credential" raised></material-button>
+      <material-button id="authenticate-button" label="Authenticate with credential" raised></material-button>
+      <i class="material-icons" id="loader">autorenew</i>
+
+      <material-dialog id="auth-dialog">
+        <h3 slot="header">Web Authentication</h3>
+        <p slot="body"></p>
+        <footer slot="footer">
+          <material-button label="Close" id="close-dialog"></material-button>
+        </footer>
+      </material-dialog>
+    </div>
+
+    <material-button id="delete-button" label="Delete credential" raised>
+      <i class="material-icons" slot="left-icon">delete</i>
+    </material-button>
+
+
+    <script type="module">
+      import './node_modules/@dannymoerkerke/material-webcomponents/src/material-button.js';
+      import './node_modules/@dannymoerkerke/material-webcomponents/src/material-dialog.js';
+    </script>
+
+    <script src="js/index.js"></script>
+
+  </body>
+</html>
