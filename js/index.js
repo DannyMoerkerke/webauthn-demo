@@ -20,7 +20,6 @@ const removeCredential = () => {
   registerButton.style.display = 'block';
 };
 
-// const apiUrl = 'https://qls9aymov0.execute-api.us-east-1.amazonaws.com/production/webauthn';
 const apiUrl = 'http://localhost:3000';
 
 const register = async () => {

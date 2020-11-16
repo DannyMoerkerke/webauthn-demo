@@ -57,6 +57,9 @@ app.get('/registration-options', async (req, res) => {
   registrationOptions.user.id = req.session.userHandle;
   registrationOptions.challenge = Buffer.from(registrationOptions.challenge);
 
+  // iOS
+  registrationOptions.authenticatorSelection = {authenticatorAttachment: 'platform'};
+
   res.json(registrationOptions);
 });
 

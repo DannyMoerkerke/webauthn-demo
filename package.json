@@ -1,6 +1,6 @@
 {
   "name": "webauthn-demo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A demo of passwordless Web Authentication (WebAuthn)",
   "main": "js/index.js",
   "scripts": {
