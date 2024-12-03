@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const errorHandler = require('errorhandler');
 const cors = require('cors');
 
-const {Fido2Lib} = require('@dannymoerkerke/fido2-lib');
+const {Fido2Lib} = require('fido2-lib');
 const crypto = require('crypto');
 const base64url = require('base64url');
 
