@@ -1,6 +1,6 @@
 {
   "name": "webauthn-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A demo of passwordless Web Authentication (WebAuthn)",
   "main": "js/index.js",
   "scripts": {
@@ -20,17 +20,17 @@
   },
   "homepage": "https://github.com/DannyMoerkerke/webauthn-demo#readme",
   "dependencies": {
-    "@dannymoerkerke/fido2-lib": "^2.4.1",
-    "@dannymoerkerke/material-webcomponents": "^1.2.14",
+    "fido2-lib": "^3.5.3",
+    "@dannymoerkerke/material-webcomponents": "^1.4.0",
     "base64url": "^3.0.1",
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.2.0",
-    "cookie-parser": "^1.4.5",
+    "body-parser": "^1.4.3",
+    "concurrently": "^9.1.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "error-handler": "^1.0.0",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "local-web-server": "^4.2.0"
+    "express-session": "^1.18.1",
+    "local-web-server": "^5.4.0"
   }
 }
