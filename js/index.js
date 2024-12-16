@@ -20,7 +20,7 @@ const removeCredential = () => {
   registerButton.style.display = 'block';
 };
 
-const apiUrl = 'http://localhost:3000';
+const apiUrl = 'https://localhost:3000';
 
 const register = async () => {
   registerButton.disabled = true;

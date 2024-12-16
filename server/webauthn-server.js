@@ -1,4 +1,4 @@
-const http = require('http');
+const https = require('https');
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
@@ -9,6 +9,8 @@ const cors = require('cors');
 const {Fido2Lib} = require('fido2-lib');
 const crypto = require('crypto');
 const base64url = require('base64url');
+const fs = require('fs');
+const path = require('path');
 
 const fido = new Fido2Lib({
   timeout: 60000,
@@ -136,10 +138,18 @@ app.post('/authenticate', async (req, res) => {
   }
 });
 
-const server = http.createServer(app);
 
-server.listen(3000, '0.0.0.0', () => {
-  console.log('WebAuthn server running on port 3000');
+const server = https.createServer({
+    key: fs.readFileSync(path.resolve(__dirname, '../ssl/private-key.pem')),
+    cert: fs.readFileSync(path.resolve(__dirname, '../ssl/localhost-cert.pem'))
+  },
+  app
+);
+
+const port = 3000;
+
+server.listen(port, '0.0.0.0', () => {
+  console.log(`WebAuthn server running on port ${port}`);
 });
 
 module.exports = app;
